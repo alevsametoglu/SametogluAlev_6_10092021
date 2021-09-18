@@ -1,0 +1,40 @@
+.btn-content {
+  background: #db8876;
+  font-size: 18px;
+  font-weight: 700;
+  height: 25px;
+  padding: 0px 5px;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  //   top: 10px;
+  //   margin-bottom: 20px;
+  a {
+    color: #000000;
+    margin: auto;
+    width: 100%;
+  }
+}
+header {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  padding-top: 20px;
+  img {
+    width: 200px;
+    height: 50px;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+
+    li {
+      list-style: none;
+    }
+  }
+}

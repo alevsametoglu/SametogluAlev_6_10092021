@@ -1,0 +1,36 @@
+.profil-photographers {
+  display: flex;
+  background: #fafafa;
+  border-radius: 5px;
+  justify-content: space-between;
+  padding: 40px;
+
+  main {
+    padding: 0px 50px;
+  }
+
+  article {
+    display: flex;
+  }
+
+  .photographer-thumb {
+    text-align: start;
+    gap: 10px;
+    h2 {
+      font-size: 64px;
+    }
+    .location {
+      font-size: 24px;
+    }
+    .interest,
+    .tag {
+      font-size: 18px;
+    }
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+  }
+}

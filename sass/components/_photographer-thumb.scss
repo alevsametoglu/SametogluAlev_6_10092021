@@ -1,0 +1,31 @@
+.photographer-thumb {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  .user-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    color: $color-secondary;
+  }
+
+  .location {
+    font-size: 13px;
+    color: $color-primary;
+  }
+  .interest {
+    font-size: 10px;
+  }
+  .price {
+    font-size: 9px;
+    color: #757575;
+  }
+  ul {
+    margin-top: 5px;
+    display: flex;
+    gap: 5px;
+  }
+}

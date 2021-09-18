@@ -1,0 +1,22 @@
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+@import "./components/tag";
+@import "./components/user-image";
+@import "./components/menu-dropdown";
+@import "./components/photographer-thumb";
+@import "./components/profil-photographer";
+@import "./components/likes";
+@import "./components/button";
+@import "./components/photos";
+@import "./layout/header";
+@import "./layout/section";
+@import "./layout/main";
+@import "./base/resets";
+@import "./base/topography";
+@import "./pages/photographer-page";
+
+.splitter {
+  border-bottom: 1px solid maroon;
+  width: 100%;
+  margin: 10px;
+}

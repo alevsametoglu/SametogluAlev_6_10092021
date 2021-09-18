@@ -1,0 +1,26 @@
+.photographer-page {
+  // margin: 0px 100px;
+  header {
+    display: block;
+    padding: 20px 100px;
+    max-width: 1240px;
+  }
+  main {
+    max-width: 1240px;
+  }
+
+  .trier-par {
+    margin: 20px 0px;
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .photo-galeri {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23px 95px;
+    justify-content: center;
+    text-align: center;
+  }
+}
