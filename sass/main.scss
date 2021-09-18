@@ -10,11 +10,12 @@
 @import "./components/button";
 @import "./components/photos";
 @import "./layout/header";
-@import "./layout/section";
 @import "./layout/main";
 @import "./base/resets";
 @import "./base/topography";
 @import "./pages/photographer-page";
+@import "./pages/home-page";
+@import "./layout/form";
 
 .splitter {
   border-bottom: 1px solid maroon;

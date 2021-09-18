@@ -152,6 +152,66 @@
           <span>300&euro;/jour</span>
         </div>
       </section>
+      <!-- modal formulaire -->
+      <div class="form-dialog">
+        <form action="photographer-page.html" method="POST" id="contact-form">
+          <header aria-label="contact form header">
+            <h1 id="form-title">
+              <span>Contactez-moi</span>
+              <span id="pohotographer-name"> mimi kell</span>
+            </h1>
+            <button id="close-btn" title="Close form" type="button">
+              <i class="fas fa-times close-form-icon" aria-hidden="true"></i>
+            </button>
+          </header>
+          <!--first name -->
+          <div class="formData">
+            <label for="first-name" id="label-firstname">Prénom</label>
+            <input
+              name="first-name"
+              id="first-name"
+              aria-labelledby="label-firstname"
+            />
+          </div>
+          <!-- last name -->
+          <div class="formData">
+            <label for="last-name" id="label-lastname">Nom</label>
+            <input
+              name="last-name"
+              id="last-name"
+              aria-labelledby="label-lastname"
+            />
+          </div>
+          <!-- email -->
+          <div class="formData">
+            <label for="email" id="label-email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              aria-labelledby="label-email"
+            />
+          </div>
+          <!-- message -->
+          <div class="formData">
+            <label for="message" id="label-message">Votre message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="20"
+              rows="5"
+              aria-labelledby="label-message"
+            ></textarea>
+          </div>
+          <!-- submit -->
+          <input
+            type="submit"
+            value="Envoyer"
+            class="form-submit"
+            title="Send"
+          />
+        </form>
+      </div>
     </main>
   </body>
 </html>

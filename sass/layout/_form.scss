@@ -1,0 +1,70 @@
+.form-dialog {
+  border: none;
+  border-radius: 0.3rem;
+  //   display: none;
+  left: 50%;
+  max-width: 700px;
+  min-width: 18.75rem;
+
+  position: absolute;
+  right: 50%;
+  top: 0px;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 11;
+
+  form {
+    background: #db8876;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 36px;
+    cursor: pointer;
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0px;
+    }
+    h1 {
+      font-size: 64px;
+      font-weight: 400;
+    }
+    .close-form-icon {
+      color: #fff;
+      font-size: 64px;
+      font-weight: 400;
+      margin-top: -40px;
+    }
+
+    .formData {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input,
+    textarea {
+      border: none;
+      border-radius: 5px;
+      font-size: 36px;
+      padding: 5px;
+    }
+    label {
+      font-size: 36px;
+      margin: 0.3rem 0 0.2rem;
+    }
+    .form-submit {
+      align-self: left;
+      background: #901c1c;
+      color: #fff;
+      font-size: 18px;
+      margin-top: 24px;
+      width: 170px;
+      padding: 20px;
+      cursor: pointer;
+    }
+    button {
+      background: none;
+      border: none;
+    }
+  }
+}
