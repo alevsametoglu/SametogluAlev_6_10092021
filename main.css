@@ -183,6 +183,22 @@
   font-size: 20px;
 }
 
+.like-price {
+  background: #db8876;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 15px;
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  border-radius: 5px;
+  position: fixed;
+}
+
 .btn {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -389,6 +405,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 h1,
@@ -445,6 +462,7 @@ body {
 
 .photographer-page main {
   max-width: 1240px;
+  position: relative;
 }
 
 .photographer-page .trier-par {
@@ -468,6 +486,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  position: relative;
 }
 
 .splitter {
