@@ -1,13 +1,18 @@
-.like-price {
-  background: #db8876;
-  display: flex;
-  gap: 60px;
-  font-size: 24px;
-  font-weight: 500;
-  padding: 15px;
-  position: absolute;
+.like-price-wrapper {
+  width: 100%;
+  text-align: right;
+  position: sticky;
   bottom: 0px;
-  right: 10px;
-  border-radius: 5px;
-  position: fixed;
+  margin-top: 20px;
+  .like-price {
+    background: #db8876;
+    display: inline-flex;
+    gap: 60px;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 15px;
+    border-radius: 5px;
+    width: fit-content;
+    margin-right: -80px;
+  }
 }

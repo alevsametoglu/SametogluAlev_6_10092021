@@ -1,12 +1,15 @@
 .form-dialog {
   border: none;
-  border-radius: 0.3rem;
-  //   display: none;
+  border-radius: 5px;
+  // display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   left: 50%;
   max-width: 700px;
-  min-width: 18.75rem;
-
+  min-width: 300px;
   position: absolute;
+  margin-top: 40px;
   right: 50%;
   top: 0px;
   transform: translateX(-50%);
@@ -18,7 +21,7 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    padding: 24px 36px;
+    padding: 15px 36px;
     cursor: pointer;
     header {
       display: flex;

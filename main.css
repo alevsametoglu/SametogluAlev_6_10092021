@@ -183,20 +183,29 @@
   font-size: 20px;
 }
 
-.like-price {
+.like-price-wrapper {
+  width: 100%;
+  text-align: right;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px;
+  margin-top: 20px;
+}
+
+.like-price-wrapper .like-price {
   background: #db8876;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   gap: 60px;
   font-size: 24px;
   font-weight: 500;
   padding: 15px;
-  position: absolute;
-  bottom: 0px;
-  right: 10px;
   border-radius: 5px;
-  position: fixed;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: -80px;
 }
 
 .btn {
@@ -322,7 +331,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
 h1,
@@ -379,7 +387,6 @@ body {
 
 .photographer-page main {
   max-width: 1240px;
-  position: relative;
 }
 
 .photographer-page .trier-par {
@@ -491,11 +498,21 @@ body {
 
 .form-dialog {
   border: none;
-  border-radius: 0.3rem;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   left: 50%;
   max-width: 700px;
-  min-width: 18.75rem;
+  min-width: 300px;
   position: absolute;
+  margin-top: 40px;
   right: 50%;
   top: 0px;
   -webkit-transform: translateX(-50%);
@@ -514,7 +531,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 24px 36px;
+  padding: 15px 36px;
   cursor: pointer;
 }
 
@@ -580,6 +597,61 @@ body {
 .form-dialog form button {
   background: none;
   border: none;
+}
+
+.lightbox {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  padding: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.lightbox i {
+  color: #901c1c;
+  font-size: 27px;
+  right: 48px;
+  top: 8px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.lightbox .close-lightbox-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.lightbox .lightbox-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.lightbox .lightbox-photo img {
+  width: 1050px;
+  height: 950px;
+  -o-object-fit: c;
+     object-fit: c;
 }
 
 .splitter {
