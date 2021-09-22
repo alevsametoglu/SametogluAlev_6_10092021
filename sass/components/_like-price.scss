@@ -15,4 +15,7 @@
     width: fit-content;
     margin-right: -80px;
   }
+  @include mobil {
+    display: none;
+  }
 }

@@ -1,73 +1,97 @@
 .form-dialog {
-  border: none;
-  border-radius: 5px;
-  // display: none;
-  display: flex;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   justify-content: center;
   align-items: center;
-  left: 50%;
-  max-width: 700px;
-  min-width: 300px;
-  position: absolute;
-  margin-top: 40px;
-  right: 50%;
-  top: 0px;
-  transform: translateX(-50%);
-  width: 100%;
   z-index: 11;
+  background: #c4c4c466;
 
   form {
-    background: #db8876;
-    border-radius: 5px;
+    position: relative;
+    background-color: #db8876;
+    padding: 15px 35px;
     display: flex;
     flex-direction: column;
-    padding: 15px 36px;
-    cursor: pointer;
+    gap: 10px;
+    @include mobil {
+      height: 100%;
+      padding-top: 10px;
+    }
     header {
-      display: flex;
-      justify-content: space-between;
       padding: 0px;
+      margin: 0px;
+      margin-top: 80px;
+      @include mobil {
+        margin-top: 30px;
+      }
+
+      h1 {
+        display: flex;
+        flex-direction: column;
+        color: black;
+        font-size: 64px;
+        @include mobil {
+          font-size: 36px;
+        }
+      }
     }
-    h1 {
-      font-size: 64px;
-      font-weight: 400;
-    }
-    .close-form-icon {
-      color: #fff;
-      font-size: 64px;
-      font-weight: 400;
-      margin-top: -40px;
+
+    #close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 42px;
+      @include mobil {
+        top: 38px;
+      }
+
+      .fas {
+        font-weight: 400;
+      }
     }
 
     .formData {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-    }
-    input,
-    textarea {
-      border: none;
-      border-radius: 5px;
-      font-size: 36px;
-      padding: 5px;
-    }
-    label {
-      font-size: 36px;
-      margin: 0.3rem 0 0.2rem;
+      input,
+      textarea {
+        width: 600px;
+        font-size: 36px;
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+        @include mobil {
+          width: 100%;
+        }
+      }
+      label {
+        font-size: 36px;
+        @include mobil {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+      }
     }
     .form-submit {
-      align-self: left;
       background: #901c1c;
-      color: #fff;
-      font-size: 18px;
-      margin-top: 24px;
-      width: 170px;
-      padding: 20px;
-      cursor: pointer;
-    }
-    button {
-      background: none;
+      color: white;
       border: none;
+      padding: 15px 40px;
+      align-self: flex-start;
+      font-size: 18px;
+      border-radius: 5px;
+      @include mobil {
+        align-self: center;
+        padding: 10px 55px;
+        margin-top: 30px;
+      }
     }
   }
 }

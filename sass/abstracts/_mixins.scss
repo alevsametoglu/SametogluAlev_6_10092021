@@ -1,6 +1,5 @@
-@mixin tag {
-  text-decoration: none;
-  color: #901c1c;
-  text-align: center;
-  overflow: hidden;
+@mixin mobil {
+  @media (max-width: 485px) and (min-width: 375px) {
+    @content;
+  }
 }

@@ -1,5 +1,5 @@
 .lightbox {
-  display: none;
+  display: flex;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -7,11 +7,12 @@
   left: 0;
   background-color: white;
   padding: 10px;
-  //   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 1440px;
   margin: auto;
+  position: fixed;
+  z-index: 1000;
 
   i {
     color: #901c1c;
@@ -21,22 +22,50 @@
     width: 100px;
     height: 100px;
     text-align: center;
+    @include mobil {
+      font-size: 18px;
+      width: 25px;
+      height: 25px;
+    }
   }
 
   .close-lightbox-icon {
     position: absolute;
     top: 10px;
     right: 10px;
+    @include mobil {
+      font-weight: 400;
+      top: 230px;
+      right: 40px;
+    }
   }
   .lightbox-photo {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    img {
-      width: 1050px;
-      height: 950px;
-      object-fit: c;
+    .photo {
+      display: flex;
+      flex-direction: column;
+      img {
+        max-width: 1050px;
+        max-height: 900px;
+        object-fit: cover;
+        @include mobil {
+          width: 289px;
+          height: 248px;
+        }
+      }
+      figcaption {
+        display: flex;
+        justify-content: space-between;
+        font-size: 24px;
+        color: $color-primary;
+        font-weight: 400;
+        @include mobil {
+          font-size: 14px;
+        }
+      }
     }
   }
 }

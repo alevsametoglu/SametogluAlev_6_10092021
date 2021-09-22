@@ -13,4 +13,11 @@
     border: 1px solid #db8876;
     color: black;
   }
+  @include mobil {
+    position: fixed;
+    z-index: 1;
+    bottom: 10px;
+    left: 100px;
+    padding: 10px 20px;
+  }
 }

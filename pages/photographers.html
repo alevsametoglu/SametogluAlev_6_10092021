@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/sass/main.css" />
+    <link rel="stylesheet" href="main.css" />
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -234,10 +234,10 @@
               <span>Contactez-moi</span>
               <span id="pohotographer-name"> mimi kell</span>
             </h1>
-            <button id="close-btn" title="Close form" type="button">
-              <i class="fas fa-times close-form-icon" aria-hidden="true"></i>
-            </button>
           </header>
+          <button id="close-btn" title="Close form" type="button">
+            <i class="fas fa-times close-form-icon" aria-hidden="true"></i>
+          </button>
           <!--first name -->
           <div class="formData">
             <label for="first-name" id="label-firstname">Prénom</label>
@@ -273,7 +273,7 @@
               name="message"
               id="message"
               cols="20"
-              rows="5"
+              rows="4"
               aria-labelledby="label-message"
             ></textarea>
           </div>
@@ -301,9 +301,12 @@
               title="Previous image"
             ></i>
           </span>
-          <figure>
-            <img src="/assets/Mimi/Animals_Rainbow.jpg" alt="" />
-          </figure>
+          <span class="photo">
+            <figure>
+              <img src="/assets/Mimi/Animals_Rainbow.jpg" alt="" />
+            </figure>
+            <figcaption>Photo</figcaption>
+          </span>
           <span>
             <i
               class="fas fa-chevron-right right-arrow-lightbox"

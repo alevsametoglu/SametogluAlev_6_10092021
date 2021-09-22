@@ -1,9 +1,12 @@
 .photographer-page {
-  // margin: 0px 100px;
   header {
     display: block;
     padding: 20px 100px;
     max-width: 1240px;
+
+    @include mobil {
+      padding: 20px;
+    }
   }
   main {
     max-width: 1240px;
@@ -15,6 +18,9 @@
     gap: 20px;
     font-size: 18px;
     font-weight: 700;
+    @include mobil {
+      display: none;
+    }
   }
   .photo-galeri {
     display: flex;
