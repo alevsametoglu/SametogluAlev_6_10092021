@@ -316,106 +316,6 @@
   font-weight: 400;
 }
 
-.btn-content {
-  background: #db8876;
-  font-size: 18px;
-  font-weight: 700;
-  height: 25px;
-  padding: 0px 5px;
-  border-radius: 5px;
-  position: absolute;
-  left: 50%;
-}
-
-.btn-content a {
-  color: #000000;
-  margin: auto;
-  width: 100%;
-}
-
-@media (max-width: 485px) and (min-width: 375px) {
-  .btn-content {
-    display: none;
-  }
-}
-
-header {
-  max-width: 1440px;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  padding-top: 20px;
-}
-
-header img {
-  width: 200px;
-  height: 50px;
-}
-
-header ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 5px;
-}
-
-header h1 {
-  color: #901c1c;
-}
-
-@media (max-width: 485px) and (min-width: 375px) {
-  header {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    gap: 20px;
-    padding: 10px;
-  }
-  header a {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
-  header a img {
-    width: 150px;
-    height: 37.5px;
-  }
-  header h1 {
-    font-size: 14px;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  header nav {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    font-size: 14px;
-  }
-  header nav ul {
-    gap: 12px;
-  }
-}
-
 main {
   max-width: 1440px;
   margin: auto;
@@ -486,6 +386,11 @@ body {
   display: block;
   padding: 20px 100px;
   max-width: 1240px;
+}
+
+.photographer-page header img {
+  width: 200px;
+  height: 50px;
 }
 
 @media (max-width: 485px) and (min-width: 375px) {
@@ -858,9 +763,7 @@ body {
 }
 
 .lightbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: absolute;
   top: 0;
   bottom: 0;

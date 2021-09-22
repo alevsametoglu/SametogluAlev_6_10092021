@@ -3,6 +3,10 @@
     display: block;
     padding: 20px 100px;
     max-width: 1240px;
+    img {
+      width: 200px;
+      height: 50px;
+    }
 
     @include mobil {
       padding: 20px;
