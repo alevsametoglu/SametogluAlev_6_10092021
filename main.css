@@ -386,6 +386,7 @@ body {
   display: block;
   padding: 20px 100px;
   max-width: 1240px;
+  margin: auto;
 }
 
 .photographer-page header img {
