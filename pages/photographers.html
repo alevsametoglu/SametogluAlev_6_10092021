@@ -21,7 +21,7 @@
     />
   </head>
   <body class="photographer-page">
-    <header>
+    <header role="banner">
       <a class="header-photographer-page" href="index.html" title="HomePage">
         <img
           src="https://res.cloudinary.com/dlpyn3wxf/image/upload/v1614078430/logo_mig5no.png"
@@ -30,7 +30,7 @@
       </a>
     </header>
     <main>
-      <section>
+      <section aria-label="photographer profils">
         <article class="profil-photographers">
           <article>
             <article class="photographer-thumb">
@@ -74,7 +74,7 @@
           </div>
         </article>
       </section>
-      <section class="photo-galeri">
+      <section class="photo-galeri" aria-label="photograps galeri">
         <article class="photos">
           <figure>
             <img src="../assets/Mimi/Animals_Rainbow.jpg" alt="" />
@@ -220,14 +220,17 @@
           </figcaption>
         </article>
       </section>
-      <div class="like-price-wrapper">
+      <div
+        class="like-price-wrapper"
+        aria-label="price and likes of photographers"
+      >
         <div class="like-price">
           <span>297 081 <i class="fas fa-heart"></i> </span>
           <span>300&euro;/jour</span>
         </div>
       </div>
       <!-- modal formulaire -->
-      <div class="form-dialog">
+      <div class="form-dialog" role="dialog" aria-label="contact form">
         <form action="photographer-page.html" method="POST" id="contact-form">
           <header aria-label="contact form header">
             <h1 id="form-title">
