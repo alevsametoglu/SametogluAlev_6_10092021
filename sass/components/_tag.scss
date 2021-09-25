@@ -1,9 +1,14 @@
-.tag {
-  border: 0.5px solid #c4c4c4;
-  box-sizing: border-box;
-  border-radius: 11px;
-  color: $color-primary;
-  font-size: 12px;
-  padding: 3px 8px;
-  font-weight: 500;
+.tag-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .tag {
+    border: 0.5px solid #c4c4c4;
+    box-sizing: border-box;
+    border-radius: 11px;
+    color: $color-primary;
+    font-size: 12px;
+    padding: 3px 8px;
+    font-weight: 500;
+  }
 }
