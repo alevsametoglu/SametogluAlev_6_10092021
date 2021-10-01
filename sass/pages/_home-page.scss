@@ -1,19 +1,21 @@
 .home-page {
   .btn-content {
-    background: #db8876;
-    font-size: 18px;
-    font-weight: 700;
-    height: 25px;
-    padding: 0px 5px;
-    border-radius: 5px;
-    position: absolute;
-    left: 50%;
-    //   top: 10px;
-    //   margin-bottom: 20px;
-    a {
+    display: none;
+    position: fixed;
+    left: calc(50% - 170px / 2);
+
+    button {
+      background: #db8876;
+      font-size: 18px;
+      font-weight: 700;
+      height: 25px;
+      padding: 0px 5px;
+      border-radius: 5px;
       color: #000000;
       margin: auto;
       width: 100%;
+      border: none;
+      cursor: pointer;
     }
     @include mobil {
       display: none;

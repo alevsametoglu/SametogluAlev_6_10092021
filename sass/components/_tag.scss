@@ -10,5 +10,17 @@
     font-size: 12px;
     padding: 3px 8px;
     font-weight: 500;
+    cursor: pointer;
+  }
+  .selected {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: white;
+  }
+
+  .tag:hover {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: white;
   }
 }

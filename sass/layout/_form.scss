@@ -48,6 +48,7 @@
       border: none;
       color: white;
       font-size: 42px;
+      cursor: pointer;
       @include mobil {
         top: 38px;
       }
@@ -57,13 +58,14 @@
       }
     }
 
-    .formData {
+    .form-input {
       display: flex;
       flex-direction: column;
       input,
       textarea {
         width: 600px;
-        font-size: 36px;
+        padding: 10px;
+        font-size: 24px;
         border: none;
         border-radius: 5px;
         background-color: white;
@@ -78,8 +80,11 @@
           margin-bottom: 10px;
         }
       }
+      .error-message {
+        color: #901c1c;
+      }
     }
-    .form-submit {
+    .form-submit-btn {
       background: #901c1c;
       color: white;
       border: none;

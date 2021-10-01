@@ -4,6 +4,12 @@
   position: sticky;
   bottom: 0px;
   margin-top: 20px;
+
+  .like-count {
+    min-width: 50px;
+    text-align: left;
+    display: inline-block;
+  }
   .like-price {
     background: #db8876;
     display: inline-flex;
@@ -13,7 +19,7 @@
     padding: 15px;
     border-radius: 5px;
     width: fit-content;
-    margin-right: -80px;
+    // margin-right: -80px;
   }
   @include mobil {
     display: none;

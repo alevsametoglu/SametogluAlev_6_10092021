@@ -19,6 +19,19 @@
   font-size: 12px;
   padding: 3px 8px;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.tag-list .selected {
+  background-color: #901c1c;
+  border-color: #901c1c;
+  color: white;
+}
+
+.tag-list .tag:hover {
+  background-color: #901c1c;
+  border-color: #901c1c;
+  color: white;
 }
 
 .user-image {
@@ -233,6 +246,12 @@
   margin-top: 20px;
 }
 
+.like-price-wrapper .like-count {
+  min-width: 50px;
+  text-align: left;
+  display: inline-block;
+}
+
 .like-price-wrapper .like-price {
   background: #db8876;
   display: -webkit-inline-box;
@@ -246,7 +265,6 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin-right: -80px;
 }
 
 @media (max-width: 485px) and (min-width: 375px) {
@@ -267,6 +285,7 @@
   font-size: 18px;
   margin-top: 30px;
   border: 1px solid #901c1c;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -285,7 +304,7 @@
   }
 }
 
-.photos {
+.media {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -295,19 +314,28 @@
           flex-direction: column;
 }
 
-.photos figure {
+.media figure {
   width: 350px;
   height: 300px;
 }
 
 @media (max-width: 485px) and (min-width: 375px) {
-  .photos figure {
+  .media figure {
     width: 335px;
     margin-top: 10px;
   }
 }
 
-.photos figure img {
+.media figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.media figure video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -315,7 +343,7 @@
   border-radius: 5px;
 }
 
-.photos figcaption {
+.media figcaption {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,6 +353,15 @@
   font-size: 24px;
   color: #901c1c;
   font-weight: 400;
+}
+
+.media figcaption h4 {
+  max-width: 280px;
+  text-align: left;
+}
+
+.media figcaption i {
+  cursor: pointer;
 }
 
 main {
@@ -413,6 +450,15 @@ body {
 
 .photographer-page main {
   max-width: 1240px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.photographer-page .tag-list {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .photographer-page .trier-par {
@@ -446,20 +492,23 @@ body {
 }
 
 .home-page .btn-content {
+  display: none;
+  position: fixed;
+  left: calc(50% - 170px / 2);
+}
+
+.home-page .btn-content button {
   background: #db8876;
   font-size: 18px;
   font-weight: 700;
   height: 25px;
   padding: 0px 5px;
   border-radius: 5px;
-  position: absolute;
-  left: 50%;
-}
-
-.home-page .btn-content a {
   color: #000000;
   margin: auto;
   width: 100%;
+  border: none;
+  cursor: pointer;
 }
 
 @media (max-width: 485px) and (min-width: 375px) {
@@ -704,6 +753,7 @@ body {
   border: none;
   color: white;
   font-size: 42px;
+  cursor: pointer;
 }
 
 @media (max-width: 485px) and (min-width: 375px) {
@@ -716,7 +766,7 @@ body {
   font-weight: 400;
 }
 
-.form-dialog form .formData {
+.form-dialog form .form-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -726,34 +776,39 @@ body {
           flex-direction: column;
 }
 
-.form-dialog form .formData input,
-.form-dialog form .formData textarea {
+.form-dialog form .form-input input,
+.form-dialog form .form-input textarea {
   width: 600px;
-  font-size: 36px;
+  padding: 10px;
+  font-size: 24px;
   border: none;
   border-radius: 5px;
   background-color: white;
 }
 
 @media (max-width: 485px) and (min-width: 375px) {
-  .form-dialog form .formData input,
-  .form-dialog form .formData textarea {
+  .form-dialog form .form-input input,
+  .form-dialog form .form-input textarea {
     width: 100%;
   }
 }
 
-.form-dialog form .formData label {
+.form-dialog form .form-input label {
   font-size: 36px;
 }
 
 @media (max-width: 485px) and (min-width: 375px) {
-  .form-dialog form .formData label {
+  .form-dialog form .form-input label {
     font-size: 24px;
     margin-bottom: 10px;
   }
 }
 
-.form-dialog form .form-submit {
+.form-dialog form .form-input .error-message {
+  color: #901c1c;
+}
+
+.form-dialog form .form-submit-btn {
   background: #901c1c;
   color: white;
   border: none;
@@ -765,7 +820,7 @@ body {
 }
 
 @media (max-width: 485px) and (min-width: 375px) {
-  .form-dialog form .form-submit {
+  .form-dialog form .form-submit-btn {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -800,9 +855,8 @@ body {
   font-size: 27px;
   right: 48px;
   top: 8px;
-  width: 100px;
-  height: 100px;
   text-align: center;
+  cursor: pointer;
 }
 
 @media (max-width: 485px) and (min-width: 375px) {
@@ -817,6 +871,7 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
+  z-index: 10;
 }
 
 @media (max-width: 485px) and (min-width: 375px) {
@@ -838,9 +893,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  width: 100%;
 }
 
-.lightbox .lightbox-photo .photo {
+.lightbox .lightbox-photo .media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -848,9 +904,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: auto;
 }
 
-.lightbox .lightbox-photo .photo img {
+.lightbox .lightbox-photo .media figure {
+  height: unset;
+  width: unset;
+}
+
+.lightbox .lightbox-photo .media img,
+.lightbox .lightbox-photo .media video {
   max-width: 1050px;
   max-height: 900px;
   -o-object-fit: cover;
@@ -858,13 +921,14 @@ body {
 }
 
 @media (max-width: 485px) and (min-width: 375px) {
-  .lightbox .lightbox-photo .photo img {
+  .lightbox .lightbox-photo .media img,
+  .lightbox .lightbox-photo .media video {
     width: 289px;
     height: 248px;
   }
 }
 
-.lightbox .lightbox-photo .photo figcaption {
+.lightbox .lightbox-photo .media figcaption {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -877,7 +941,7 @@ body {
 }
 
 @media (max-width: 485px) and (min-width: 375px) {
-  .lightbox .lightbox-photo .photo figcaption {
+  .lightbox .lightbox-photo .media figcaption {
     font-size: 14px;
   }
 }
