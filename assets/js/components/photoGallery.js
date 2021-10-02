@@ -10,7 +10,7 @@ const getMediaListElements = (mediaList, onClickFav, onClickMedia) => {
     mediaEl.innerHTML += `
           <figure>${figureContent}</figure>
           <figcaption>
-              <h4>${media.title}</h4>
+              <p>${media.title}</p>
               <div class="likes">
                   <span>${media.likes}</span>                 
               </div>
