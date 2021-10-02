@@ -33,9 +33,9 @@ export default class ComponentFactory {
       tagEl.addEventListener("click", () =>
         datum.toggleSelectedTags(datum.value)
       );
-      tagEl.innerHTML = `<li><a><span class="tag ${
+      tagEl.innerHTML = `<a><span class="tag ${
         datum.isSelected ? "selected" : ""
-      }">#${datum.value}</span></a></li>`;
+      }">#${datum.value}</span></a>`;
 
       tagListEl.appendChild(tagEl);
     });
