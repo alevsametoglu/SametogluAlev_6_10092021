@@ -1,34 +1,69 @@
 export default class ComponentFactory {
   static createPhotographerEl(photographer) {
-    console.log(photographer);
-    const el = document.createElement("article");
-    el.classList.add("photographer-thumb");
-    el.innerHTML = `
-            <a href="./pages/photographers.html" title="${photographer.name}">
+    const photographerEl = document.createElement("article");
+    photographerEl.classList.add("photographer-thumb");
+    photographerEl.innerHTML = `
+            <a href="./photographers.html?id=${photographer.id}" title="${photographer.name}">
             <img
             class="user-image"
-            src="./assets/images//Photographers ID Photos/${
-              photographer.portrait
-            }"
+            src="./assets/images/Photographers ID Photos/${photographer.portrait}"
             alt="${photographer.name}"
             />
             <h2>${photographer.name}</h2>
         </a>
         <p class="location">${photographer.city}, ${photographer.country}</p>
         <p class="interest">${photographer.tagline}</p>
-        <p class="price">${photographer.price}&euro;/jour</p>
-        ${this.createTagList(photographer.tags)}
+        <p class="price">${photographer.price}&euro;/jour</p>       
     `;
-    return el;
+
+    const tagElementsData = photographer.tags.map((tag) => {
+      return { value: tag };
+    });
+    const tagListEl = this.createTagListEl(tagElementsData);
+    photographerEl.appendChild(tagListEl);
+    return photographerEl;
   }
 
-  static createTagList(tags) {
-    return ` <ul class="tag-list">
-              ${tags
-                .map(
-                  (tag) => ` <li><a><span class="tag">#${tag}</span></a></li>`
-                )
-                .join("")}
-          </ul>`;
+  static createTagListEl(tagElementsData) {
+    const tagListEl = document.createElement("ul");
+    tagListEl.classList.add("tag-list");
+
+    tagElementsData.forEach((datum) => {
+      const tagEl = document.createElement("li");
+      tagEl.addEventListener("click", () =>
+        datum.toggleSelectedTags(datum.value)
+      );
+      tagEl.innerHTML = `<li><a><span class="tag ${
+        datum.isSelected ? "selected" : ""
+      }">#${datum.value}</span></a></li>`;
+
+      tagListEl.appendChild(tagEl);
+    });
+
+    return tagListEl;
+  }
+
+  static createPhotoGallerySortEl(onChange) {
+    const sortEl = document.createElement("article");
+    sortEl.classList.add("trier-par");
+    sortEl.innerHTML = `    
+        <span id="trier">Trier par</span>
+        <div class="selectdiv">
+          <label for=""></label>
+        </div>
+    `;
+
+    const selectEl = document.createElement("select");
+    selectEl.addEventListener("change", (e) => onChange(e.target.value));
+    selectEl.classList.add("menu-dropdownn");
+    selectEl.innerHTML = `
+        <option value="Popularite">Popularite</option>
+        <option value="Date">Date</option>
+        <option value="Titre">Titre</option>
+      `;
+
+    sortEl.querySelector(".selectdiv label").appendChild(selectEl);
+
+    return sortEl;
   }
 }
