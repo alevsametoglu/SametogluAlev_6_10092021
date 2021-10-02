@@ -23,13 +23,13 @@ export default class PhotographerProfileComponent {
                     .join("")}
                 </ul>
               </article>
-              <button type="submit" class="btn">Contactez-moi</button>
+              <button type="submit" class="btn" aria-label="contact button">Contactez-moi</button>
             </article>
             <img
               class="user-image"
               src="./assets/images/Photographers ID Photos/${
                 photographer.portrait
-              }"
+              }" alt="${photographer.name}"
             />            
           </article>         
     `;
@@ -44,7 +44,7 @@ export default class PhotographerProfileComponent {
               <span id="pohotographer-name">${photographer.name}</span>
             </h1>
           </header>
-          <button id="close-btn" title="Close form" type="button">
+          <button id="close-btn" title="Close form" type="button" aria-label="close button">
             <i class="fas fa-times close-form-icon" aria-hidden="true"></i>
           </button>
           <!--first name -->
