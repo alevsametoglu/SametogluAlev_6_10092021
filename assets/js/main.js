@@ -21,7 +21,7 @@ const loadTagList = () => {
       return {
         value: tag,
         isSelected: selectedTags.includes(tag),
-        toggleSelectedTags,
+        onClick: toggleSelectedTags,
       };
     });
 
@@ -39,8 +39,8 @@ const loadPhotographerList = () => {
   });
 };
 
-const scrollPage = () => Scroll.scrollBtn();
+const loadScrollToTopButton = () => Scroll.scrollBtn();
 
-loadPhotographerList();
 loadTagList();
-scrollPage();
+loadPhotographerList();
+loadScrollToTopButton();

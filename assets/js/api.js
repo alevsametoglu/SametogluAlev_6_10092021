@@ -1,6 +1,6 @@
 "use strict";
 const PATH = "./assets/data/photographer.json";
-const getData = () => fetch(PATH).then((response) => response.json());
+const getData = () => fetch(PATH).then((response) => response.json()); //read json file
 
 export default class API {
   static getPhotographerList() {
@@ -39,17 +39,16 @@ export default class API {
   static getPhotographerMedia(photographerId) {
     return getData().then((data) => {
       const photographer = data.photographers.find(
-        (x) => x.id == photographerId
+        (photographer) => photographer.id == photographerId
       );
       const firstName = photographer.name.split(" ")[0];
-      console.log({ firstName });
 
       return data.media
-        .filter((photo) => photo.photographerId == photographerId)
-        .map((photo) => {
+        .filter((mediaDatum) => mediaDatum.photographerId == photographerId)
+        .map((mediaDatum) => {
           return {
-            ...photo,
-            source: `${firstName}/${photo.image || photo.video}`,
+            ...mediaDatum,
+            source: `${firstName}/${mediaDatum.image || mediaDatum.video}`,
           };
         });
     });
