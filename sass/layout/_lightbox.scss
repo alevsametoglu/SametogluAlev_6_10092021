@@ -57,8 +57,10 @@
 
       img,
       video {
+        height: 85vh;
         max-width: 1050px;
         max-height: 900px;
+
         object-fit: cover;
         @include mobil {
           width: 289px;
