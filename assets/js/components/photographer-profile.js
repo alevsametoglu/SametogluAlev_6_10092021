@@ -5,9 +5,9 @@ export default class PhotographerProfileComponent {
     const photographerProfileEl = document.createElement("section");
     photographerProfileEl.setAttribute("aria-label", "photographer profils");
     photographerProfileEl.innerHTML = `
-          <article class="profil-photographers">
-            <article>
-              <article class="photographer-thumb">
+          <div  role="article" class="profil-photographers">
+            <div>
+              <div class="photographer-thumb">
                 <a href="" title="${photographer.name}">
                   <h2>${photographer.name}</h2>
                 </a>
@@ -18,20 +18,20 @@ export default class PhotographerProfileComponent {
                   ${photographer.tags
                     .map(
                       (tag) =>
-                        `<li><a><span class="tag">#${tag}</span> </a></li>`
+                        `<li  ><a><span class="tag">#${tag}</span> </a></li>`
                     )
                     .join("")}
                 </ul>
-              </article>
+              </div>
               <button type="submit" class="btn" aria-label="contact button">Contactez-moi</button>
-            </article>
+            </div>
             <img
               class="user-image"
               src="./assets/images/Photographers ID Photos/${
                 photographer.portrait
               }" alt="${photographer.name}"
             />            
-          </article>         
+          </div>         
     `;
 
     const contactFormInnerHTML = `
@@ -102,9 +102,8 @@ export default class PhotographerProfileComponent {
     `;
     photographerProfileEl.innerHTML += contactFormInnerHTML;
 
-    const contactButton = photographerProfileEl.querySelector(
-      "article > article > button"
-    );
+    const contactButton =
+      photographerProfileEl.querySelector("div > div > button");
 
     const contactForm = new ContactForm(photographerProfileEl);
     contactButton.addEventListener("click", contactForm.openContactForm);
