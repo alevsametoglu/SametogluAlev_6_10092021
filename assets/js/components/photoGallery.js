@@ -5,13 +5,13 @@ const getMediaListElements = (mediaList, onClickFav, onClickMedia) => {
 
     const figureContent = !!media.image
       ? `<img src="./assets/images/${media.source}" alt="${media.image}" />`
-      : `<video src="./assets/images/${media.source}" alt="${media.video}" controls="controls" role="button"   aria-label="${media.video}"/>`;
+      : `<video src="./assets/images/${media.source}" alt="${media.video}" controls="controls"   aria-label="${media.video}"/>`;
 
     mediaEl.innerHTML += `
-          <figure>${figureContent}</figure>
+          <figure tabindex="0">${figureContent}</figure>
           <figcaption>
               <p>${media.title}</p>
-              <div class="likes">
+              <div  tabindex="0"    class="likes">
                   <span>${media.likes}</span>                 
               </div>
           </figcaption>
