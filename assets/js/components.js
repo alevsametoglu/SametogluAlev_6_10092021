@@ -7,7 +7,7 @@ export default class ComponentFactory {
             <img
             class="user-image"
             src="./assets/images/Photographers ID Photos/${photographer.portrait}"
-            alt="${photographer.name}"
+            alt="photograph of ${photographer.name}"
             />
             <h2>${photographer.name}</h2>
         </a>
@@ -19,6 +19,7 @@ export default class ComponentFactory {
     const tagElementsData = photographer.tags.map((tag) => {
       return { value: tag };
     });
+
     const tagListEl = this.createTagListEl(tagElementsData);
     photographerEl.appendChild(tagListEl);
     return photographerEl;
@@ -30,13 +31,11 @@ export default class ComponentFactory {
 
     tagElementsData.forEach((datum) => {
       const tagEl = document.createElement("li");
-      tagEl.addEventListener("click", () =>
-        datum.toggleSelectedTags(datum.value)
-      );
+      tagEl.addEventListener("click", () => datum.onClick(datum.value));
       tagEl.innerHTML = `<a><span class="tag ${
         datum.isSelected ? "selected" : ""
       }">#${datum.value}</span></a>`;
-
+      tagEl.tabIndex = 0;
       tagListEl.appendChild(tagEl);
     });
 
@@ -56,6 +55,7 @@ export default class ComponentFactory {
     const selectEl = document.createElement("select");
     selectEl.addEventListener("change", (e) => onChange(e.target.value));
     selectEl.classList.add("menu-dropdownn");
+    selectEl.setAttribute("aria-label", "sort by");
     selectEl.innerHTML = `
         <option value="Popularite">Popularite</option>
         <option value="Date">Date</option>
