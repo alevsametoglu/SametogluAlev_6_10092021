@@ -5,6 +5,7 @@
   figure {
     width: 350px;
     height: 300px;
+    // max-height: 85vh;
     @include mobil {
       width: 335px;
       margin-top: 10px;
@@ -35,6 +36,10 @@
     }
     i {
       cursor: pointer;
+    }
+    p {
+      max-width: 285px;
+      text-align: left;
     }
   }
 }
