@@ -131,35 +131,43 @@ const loadTotalLike = () => {
   mainEl.appendChild(totalLikeEl);
 };
 
+const sliderNextImage = () => {
+  if (mediaList.length > sliderLightBoxActiveIndex) {
+    sliderLightBoxActiveIndex++;
+    updateSliderMedia();
+  }
+};
+
+const sliderPreviousImage = () => {
+  console.log(sliderLightBoxActiveIndex);
+  if (sliderLightBoxActiveIndex > 0) {
+    sliderLightBoxActiveIndex--;
+    updateSliderMedia();
+  }
+};
+
 const loadPhotoSliderLightbox = () => {
   const mainEl = document.querySelector("main");
   const media = mediaList[sliderLightBoxActiveIndex];
   console.log({ media });
 
-  const onClickNext = () => {
-    if (mediaList.length > sliderLightBoxActiveIndex) {
-      sliderLightBoxActiveIndex++;
-      updateSliderMedia();
-    }
-  };
-
-  const onClickPrevious = () => {
-    console.log(sliderLightBoxActiveIndex);
-    if (sliderLightBoxActiveIndex > 0) {
-      sliderLightBoxActiveIndex--;
-      updateSliderMedia();
-    }
-  };
-
   const lightBox = LightBoxComponent.getEl(
     media.source,
     media.title,
     media.image ? "image" : "video",
-    onClickNext,
-    onClickPrevious
+    sliderNextImage,
+    sliderPreviousImage
   );
 
   mainEl.appendChild(lightBox);
+  loadKeyboardNavigation();
+};
+
+const loadKeyboardNavigation = () => {
+  document.addEventListener("keydown", (e) => {
+    if (e.code === "ArrowRight") sliderNextImage();
+    if (e.code === "ArrowLeft") sliderPreviousImage();
+  });
 };
 
 const loadPage = async () => {
