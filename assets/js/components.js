@@ -32,10 +32,10 @@ export default class ComponentFactory {
     tagElementsData.forEach((datum) => {
       const tagEl = document.createElement("li");
       tagEl.addEventListener("click", () => datum.onClick(datum.value));
-      tagEl.innerHTML = `<a><span class="tag ${
+      tagEl.innerHTML = `<a ><button class="tag ${
         datum.isSelected ? "selected" : ""
-      }">#${datum.value}</span></a>`;
-      tagEl.tabIndex = 0;
+      }">#${datum.value}</button></a>`;
+
       tagListEl.appendChild(tagEl);
     });
 
