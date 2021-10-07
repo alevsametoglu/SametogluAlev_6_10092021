@@ -29,7 +29,7 @@ export default class LightBoxComponent {
     const figureContent =
       type === "image"
         ? `<img src="./assets/images/${source}" alt="${title}" />`
-        : `<video src="./assets/images/${source}" alt="${title}" controls="controls" role="button" />`;
+        : `<video src="./assets/images/${source}" alt="${title}" controls="controls"  />`;
 
     mediaEl.innerHTML = `
             <figure>
@@ -58,7 +58,7 @@ export default class LightBoxComponent {
     const figureContent =
       type === "image"
         ? `<img src="./assets/images/${source}" alt="${title}" />`
-        : `<video src="./assets/images/${source}" alt="${title}" controls="controls" role="button" />`;
+        : `<video src="./assets/images/${source}" alt="${title}" controls="controls" />`;
 
     mediaEl.innerHTML = `
     <figure>
