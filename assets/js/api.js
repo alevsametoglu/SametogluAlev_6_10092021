@@ -1,7 +1,7 @@
 "use strict";
 const PATH = "./assets/data/photographer.json";
 const getData = () => fetch(PATH).then((response) => response.json()); //read json file
-
+getData().then((response) => console.log(response));
 export default class API {
   static getPhotographerList() {
     return getData().then((data) => data.photographers);

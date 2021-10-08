@@ -4,15 +4,15 @@ const getMediaListElements = (mediaList, onClickFav, onClickMedia) => {
     mediaEl.classList.add("media");
 
     const figureContent = !!media.image
-      ? `<img src="./assets/images/${media.source}" alt="${media.image}" />`
-      : `<video src="./assets/images/${media.source}" alt="${media.video}" controls="controls"   aria-label="${media.video}"/>`;
+      ? `<img src="./assets/images/${media.source}" alt="${media.title}" />`
+      : `<video src="./assets/images/${media.source}" alt="${media.title}" controls="controls"   aria-label="${media.title}"/>`;
 
     mediaEl.innerHTML += `
           <figure tabindex="0">${figureContent}</figure>
           <figcaption>
               <p>${media.title}</p>
               <div  tabindex="0"    class="likes">
-                  <span>${media.likes}</span>                 
+                  <span aria-label="${media.likes}like" >${media.likes}</span>                 
               </div>
           </figcaption>
      `;
