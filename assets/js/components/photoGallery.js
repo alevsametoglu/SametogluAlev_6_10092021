@@ -12,26 +12,34 @@ const getMediaListElements = (mediaList, onClickFav, onClickMedia) => {
           <figcaption>
               <p>${media.title}</p>
               <div  tabindex="0"    class="likes">
-                  <span aria-label="${media.likes}like" >${media.likes}</span>                 
+                  <span aria-label="${media.likes}    like" >${media.likes}</span>                 
               </div>
           </figcaption>
      `;
 
     const figure = mediaEl.querySelector("figure");
     figure.addEventListener("click", () => onClickMedia(index));
-
+    figure.addEventListener(
+      "keydown",
+      (e) => e.code === "Enter" && onClickMedia(index)
+    );
     const likeDiv = mediaEl.querySelector("div.likes");
     const icon = document.createElement("i");
     icon.classList.add("fa-heart");
     icon.classList.add("far");
     let isLiked = false;
-    icon.addEventListener("click", () => {
+    const clickFav = () => {
       isLiked = !isLiked;
       onClickFav(media.id);
       icon.classList.toggle("fas");
       const likeCountEl = likeDiv.querySelector("span");
       likeCountEl.innerHTML = isLiked ? media.likes + 1 : media.likes;
-    });
+    };
+    icon.addEventListener("click", clickFav);
+    likeDiv.addEventListener(
+      "keydown",
+      (e) => e.code === "Enter" && clickFav()
+    );
     likeDiv.appendChild(icon);
     return mediaEl;
   });

@@ -3,6 +3,7 @@ export default class LightBoxComponent {
     const lightBoxEl = document.createElement("div");
     lightBoxEl.classList.add("lightbox");
     lightBoxEl.setAttribute("role", "dialog");
+    lightBoxEl.addEventListener("keydown", (e) => console.log(e.code));
 
     const closeButton = document.createElement("i");
     closeButton.className = "fas fa-times close-lightbox-icon";

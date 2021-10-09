@@ -165,6 +165,7 @@ const loadPhotoSliderLightbox = () => {
 
 const loadKeyboardNavigation = () => {
   document.addEventListener("keydown", (e) => {
+    if (e.code === "Escape") LightBoxComponent.hide();
     if (e.code === "ArrowRight") sliderNextImage();
     if (e.code === "ArrowLeft") sliderPreviousImage();
   });
